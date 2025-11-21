@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Gaby Goo">
+    <meta name="description" content="Learn about the Declaration of Independence and Founding Documents.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Da North Shore Eats</title>
+    <link href="travelers.css" rel="stylesheet"> 
+        <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+    </head>
+
+<!-- This starts the main content of my page. -->
+<body>
+
+<!-- This is the header section. -->
+<header>
+    <img src="images/logo.png" alt="Logo for Da North Shore" width="38" height="50">
+    <h1>Da North Shore Eats</h1>
+    <p>Best Food on the North Shore</p>
+</header>
+
+<!-- This is the navigation section. -->
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="food.html">Food</a></li>
+        <li class="active"><a href="review.html">Reviews</a></li>
+    </ul>
+</nav>
+
+<!-- This is the main section. -->
+<main>
+<h1>Reviews</h1>
+<p>Make a review of your favorite place on the North Shore and show us the good eats.</p>
+
+<form method="get" class="myreview" action="thanks.html">
+<fieldset>
+    <legend>Personal Reviews</legend>
+    <label>Username: <input type="text" name="uname" required placeholder="Email Address"></label>
+    <label>Location:* <input type="text" name="location" required placeholder="Laie,HI"></label>   
+    <label>Review:* <textarea name="review"></textarea></label>
+    <label for="rating">Rating:</label>
+    <input 
+    type="range" 
+    id="rating" 
+    name="rating" 
+    min="1" 
+    max="10" 
+    value="5"
+    oninput="document.getElementById('output').value = this.value">
+    <output id="output">5</output>/10
+    
+        <label for="imageUpload">Upload Images:</label>
+        <input type="file" id="imageUpload" accept="image/*">
+        
+       <legend>Payment</legend>
+            <label><input type="checkbox" name="cash" value="cash">Cash</label>
+            <label><input type="checkbox" name="card" value="card">Card</label>
+            <label><input type="checkbox" name="applepay" value="applepay">Apple Pay</label>
+
+        <label>Time of Day 
+            <select name="time">
+                <option value="none">Please select</option>
+                <option value="morning">Between 7:00am and 11:00am</option>
+                <option value="noon">Between 11:00am and 2:00pm</option>
+                <option value="afternoon">Between 2:00pm and 5:00pm</option>
+                <option value="evening">Between 5:00pm and 8:00pm</option>
+            </select>
+        </label>
+</fieldset>
+
+<fieldset>
+    <legend>Add Your Own</legend>
+    <label>Name of Place: <input type="text" name="uofpname" ></label>
+    <label>Location: <input type="text" name="location" ></label>   
+    <label>Review: <textarea name="review"></textarea></label>
+    <label for="rating">Rating:</label>
+    <input type="range" id="rating" name="rating" min="1" max="10"  value="5"
+    oninput="document.getElementById('output1').value = this.value">
+    <output id="output1">5</output>/10
+    <!---     new form -->
+        <label for="imageUpload">Upload Images:</label>
+        <input type="file" id="imageUpload" accept="image/*">
+    
+       <legend>Payment</legend>
+            <label><input type="checkbox" name="cash" value="cash">Cash</label>
+            <label><input type="checkbox" name="card" value="card">Card</label>
+            <label><input type="checkbox" name="applepay" value="applepay">Apple Pay</label>
+
+        <label>Time of Day 
+            <select name="time">
+                <option value="none">Please select</option>
+                <option value="morning">Between 7:00am and 11:00am</option>
+                <option value="noon">Between 11:00am and 2:00pm</option>
+                <option value="afternoon">Between 2:00pm and 5:00pm</option>
+                <option value="evening">Between 5:00pm and 8:00pm</option>
+            </select>
+        </label>
+</fieldset>
+
+<fieldset>
+    <legend>App Rating</legend>
+    <label><input type="radio" name="method" value="Love It">Love It</label>
+    <label><input type="radio" name="method" value="Like It">Like It</label>
+    <label><input type="radio" name="method" value="Not It">Not It</label>
+    <input type="submit" value="Send My Review">
+</fieldset>
+
+</form>
+
+<footer>
+    &copy; 2025  |  Gaby Goo &bull;  All Rights Reserved 
+</footer>
+
+</body>
+</html>
